@@ -108,6 +108,8 @@ for(i=1;i<sayilar.length; i++) {
   }else {
     enkucuk=sayilar[i];
   }
+
+  
 }
 
 // 3b çözümü:
@@ -148,12 +150,13 @@ let siralisayilar=sayilar.sort((a,b)=>a-b);
 
 let tekraredensayilar=0;
 
-for (sayi of sayilar) {
- if(sayi===undefined) {
-  tekraredensayilar[sayi]=1;
+for (i=0; i<sayilar.length; i++) {
+ if(tekraredensayilar[sayilar[i]]===undefined) {
+  tekraredensayilar[sayilar[i]]=1;
  }else{
-  tekraredensayilar[sayi]++;
+  tekraredensayilar[sayilar[i]]++;
  }
+ return `${sayilar[i]} sayısı ${tekraredensayilar[sayilar[i]]} kere tekrar edilmiştir`
 }
 
 
