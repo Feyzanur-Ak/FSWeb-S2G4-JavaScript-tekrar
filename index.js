@@ -148,7 +148,8 @@ let siralisayilar=sayilar.sort((a,b)=>a-b);
 
 // 3f çözümü
 
-let tekraredensayilar=0;
+let tekraredensayilar={};
+const sonuc=[];
 
 for (i=0; i<sayilar.length; i++) {
  if(tekraredensayilar[sayilar[i]]===undefined) {
@@ -156,7 +157,12 @@ for (i=0; i<sayilar.length; i++) {
  }else{
   tekraredensayilar[sayilar[i]]++;
  }
- return `${sayilar[i]} sayısı ${tekraredensayilar[sayilar[i]]} kere tekrar edilmiştir`
+}
+
+for(let sayi in tekraredensayilar) {
+  let tekrarSayisi=tekraredensayilar[sayilar[i]];
+
+  sonuc.push(`${sayi} sayısı ${tekrarSayisi} kere tekrar edilmiştir`)
 }
 
 
