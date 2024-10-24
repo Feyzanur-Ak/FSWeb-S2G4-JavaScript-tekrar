@@ -146,7 +146,15 @@ let siralisayilar=sayilar.sort((a,b)=>a-b);
 
 // 3f çözümü
 
-let tekraredensayilar;
+let tekraredensayilar=0;
+
+for (sayi of sayilar) {
+ if(sayi===undefined) {
+  tekraredensayilar[sayi]=1;
+ }else{
+  tekraredensayilar[sayi]++;
+ }
+}
 
 
 
